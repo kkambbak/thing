@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+import quotes.entity.Quotes;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -13,7 +14,7 @@ public class Main {
 class App{
     int idx = 1;
     Scanner sc = new Scanner(System.in);
-    Map<Integer,Quotes> qList = new HashMap<>();
+    Map<Integer, Quotes> qList = new HashMap<>();
     public void run(){
         System.out.println("== 명언 앱 ==");
 
@@ -96,37 +97,3 @@ class Orders{
     }
 }
 
-class Quotes{
-    private int quotesNum;
-    private String quotes;
-    private String author;
-
-    public int getQuotesNum() {
-        return quotesNum;
-    }
-
-    public void setQuotesNum(int quotesNum) {
-        this.quotesNum = quotesNum;
-    }
-    public String getQuotes() {
-        return quotes;
-    }
-
-    public void setQuotes(String quotes) {
-        this.quotes = quotes;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    Quotes(int quotesNum, String quotes, String author){
-        this.quotesNum = quotesNum;
-        this.quotes = quotes;
-        this.author = author;
-    }
-}
