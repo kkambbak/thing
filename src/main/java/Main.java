@@ -44,7 +44,22 @@ class App{
                 }
             }
 
+            if (order.contains("삭제?id=")){
+                int num = Integer.parseInt(order.substring(6));
+                boolean deleteCheck = false;
+                for (Quotes q: arr
+                ) {
+                    if(q.getQuotesNum()==num){
+                        arr.remove(q);
+                        System.out.println(num+"번 명언이 삭제되었습니다.");
+                        deleteCheck = true;
+                    }
+                }
+                if(deleteCheck == false){
+                    System.out.println(num + "번 명언이 존재하지 않습니다.");
+                }
 
+            }
         }
     }
 }
