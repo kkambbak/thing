@@ -10,23 +10,28 @@ public class Main {
 class App{
     public void run(){
         System.out.println("== 명언 앱 ==");
-        System.out.print("명령) ");
-        Scanner sc = new Scanner(System.in);
-        String order = sc.nextLine();
         int idx = 1;
 
-        if (order.equals("등록") ){
+        while(true){
+            System.out.print("명령) ");
+            Scanner sc = new Scanner(System.in);
+            String order = sc.nextLine();
+            if (order.equals("종료")){
+                break;
+            }
 
-            System.out.print("명언 : ");
-            String s = sc.nextLine();
+            if (order.equals("등록") ){
 
-            System.out.print("작가 : ");
-            String a = sc.nextLine();
-            System.out.println( idx + "번 명언이 등록되었습니다.");
-            Quotes newQuotes = new Quotes(idx++, s, a);
+                System.out.print("명언 : ");
+                String s = sc.nextLine();
 
+                System.out.print("작가 : ");
+                String a = sc.nextLine();
+                System.out.println( idx + "번 명언이 등록되었습니다.");
+                Quotes newQuotes = new Quotes(idx++, s, a);
+
+            }
         }
-        System.out.println("명령) 종료");
     }
 }
 
