@@ -1,4 +1,4 @@
-package quotes.entity;
+package org.example.quotes.entity;
 
 public class Quotes {
     private int quotesNum;
