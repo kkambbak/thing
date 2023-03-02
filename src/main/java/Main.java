@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -11,6 +12,7 @@ class App{
     public void run(){
         System.out.println("== 명언 앱 ==");
         int idx = 1;
+        ArrayList<Quotes> arr = new ArrayList<>();
 
         while(true){
             System.out.print("명령) ");
@@ -29,8 +31,20 @@ class App{
                 String a = sc.nextLine();
                 System.out.println( idx + "번 명언이 등록되었습니다.");
                 Quotes newQuotes = new Quotes(idx++, s, a);
+                arr.add(newQuotes);
 
             }
+
+            if (order.equals("목록")){
+                System.out.println("번호 / 작가 / 명언");
+                System.out.println("------------------------");
+                for (Quotes q: arr
+                     ) {
+                    System.out.println(q.getQuotesNum()+ " / " + q.getAuthor() + " / " +  q.getQuotes());
+                }
+            }
+
+
         }
     }
 }
